@@ -17,7 +17,6 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
   }
-  position: relative;
 `;
 
 export default BackgroundImage

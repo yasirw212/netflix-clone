@@ -9,9 +9,9 @@ const SignUp = () => {
     <Container>
         <BackgroundImage />
         <div className="content">
-          <Header />
-          <div className="body flex column a-center j-center">
-              <div className="text flex colum">
+          <Header login={true} />
+          <div className="body flex column  a-center ">
+              <div className="text flex column">
                   <h1>Unlimited Movies, TV shows nd more</h1>
                   <h4>Watch anywhere. Cancek anytyime</h4>
                   <h6>Ready to watch? Enter your email to create or restart membership</h6>
@@ -20,8 +20,8 @@ const SignUp = () => {
                   <input type="email" placeholder='Email Address' name='email'/>
                   <input type="password" placeholder='Password' name='password' />
                   <button type='submit'>Get Started</button>
-                  <Link to={'/Login'}>Log In</Link>
               </div>
+              <button >Log In</button>
           </div>
         </div>
     </Container>
@@ -29,7 +29,7 @@ const SignUp = () => {
 }
 
 const Container = styled.div`
-  position: absolute;
+  position: relative;
   .content {
     position: absolute;
     top: 0;
@@ -38,7 +38,51 @@ const Container = styled.div`
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-rows: 15vh 85vh
+    grid-template-rows: 15vh 85vh;
+  }
+  .body {
+    gap: 1rem;
+    .text {
+      gap: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      h1 {
+        padding: 0 25rem;
+      }
+    }
+    .form {
+      display: grid;
+      width: 60%;
+      input {
+        color: black;
+        border: none;
+        padding: 1.5rem;
+        font-size: 1.2rem; 
+        border: 1px solid black;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        padding: 0.5rem 1rem;
+        background-color: #e50914;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.05rem;
+      }
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #e50914;
+      border: none;
+      cursor: pointer;
+      color: white;
+      border-radius: 0.2rem;
+      font-weight: bolder;
+      font-size: 1.05rem;
+    }
   }
 `;
 
